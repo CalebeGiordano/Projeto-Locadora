@@ -1,0 +1,167 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Seção de boas-vindas com parallax */
+.welcome {
+    position: relative;
+    height: 500px;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.parallax-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://cdn.motor1.com/images/mgl/KPK4R/s1/bmw-320i-m-sport-2021-teste-br.jpg') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+    transform: translateY(0);
+    will-change: transform;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    padding: 100px 20px;
+}
+
+/* Frota de veículos */
+.frota {
+    padding: 20px;
+    text-align: center;
+}
+
+.frota h2 {
+    margin-bottom: 20px;
+}
+
+.carros {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.carro {
+    background-color: white;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    text-align: center;
+}
+
+.carro img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.carro h3 {
+    margin: 15px 0;
+}
+
+.carro button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.carro button:hover {
+    background-color: #218838;
+}
+
+/* Seção de contato */
+.contato {
+    background-color: #fff;
+    padding: 40px;
+    text-align: center;
+}
+
+.contato form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contato input, .contato textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contato button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contato button:hover {
+    background-color: #0056b3;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .carros {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carro {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
